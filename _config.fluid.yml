@@ -1,0 +1,243 @@
+---
+#---------------------------
+# Hexo Theme Fluid
+# Author: Fluid-dev
+# Github: https://github.com/fluid-dev/hexo-theme-fluid
+#
+# 配置指南: https://hexo.fluid-dev.com/docs/guide/
+# 你可以从指南中获得更详细的说明
+#---------------------------
+
+#---------------------------
+# 全局
+# Global
+
+navbar:
+  blog_title: Blade
+  menu:
+    - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
+    - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
+    - {
+        key: "about",
+        link: "/about/",
+        icon: "iconfont icon-user-fill",
+        name: "关于",
+      }
+
+font: # 主题字体配置
+  font_size: 26px # 全局字号
+  font_family: "楷体" # 全局字体族
+  code_font_size: 85% # 代码的字号
+
+post:
+  banner_img: /img/background.jpg
+
+index:
+  index_img: /img/background.jpg
+  post_url_target: _self
+  banner_img: /img/background.jpg
+  banner_img_height: 80
+  post_meta:
+    date: true
+    category: true
+    tag: true
+    banner_img: /img/background.jpg
+  slogan:
+    enable: true
+    text: The Jealousy and Roar Blade
+  auto_excerpt:
+    enable: false
+
+fun_features:
+  typing: # 为 subtitle 添加打字机效果
+    enable: false
+    typeSpeed: 70 # 打印速度
+    cursorChar: "_" # 游标字符
+    loop: false # 是否循环播放效果
+
+default_index_img: /img/background.jpg
+
+about:
+  avatar: /img/1.jpg
+  name: "马不前"
+  intro: "000"
+  icons:
+    - {
+        class: "iconfont icon-github-fill",
+        link: "https://github.com",
+        tip: "GitHub",
+      }
+
+#---------------------------
+
+# 用于浏览器标签的图标
+favicon: /img/2.png
+# 用于苹果设备的图标
+apple_touch_icon: /img/2.png
+
+# 浏览器标签页中的标题分隔符，效果：文章名 - 站点名
+tab_title_separator: " - "
+
+# 强制所有链接升级为 HTTPS（适用于图片等资源出现 HTTP 混入报错）
+force_https: false
+
+# 代码块的增强配置
+code:
+  # 是否开启复制代码的按钮
+  copy_btn: true
+  # 代码语言
+  # Code language
+  language:
+    enable: true
+    default: "TEXT"
+
+  # 代码高亮
+  # Code highlight
+  highlight:
+    enable: true
+
+    # 代码块是否显示行号
+    line_number: true
+
+    # 实现高亮的库，对应下面的设置
+    # Highlight library
+    # Options: highlightjs | prismjs
+    lib: "highlightjs"
+
+    highlightjs:
+      # 在链接中挑选 style 填入
+      # Select a style in the link
+      # See: https://highlightjs.org/demo/
+      style: "github gist"
+      style_dark: "dark"
+
+    prismjs:
+      # 在下方链接页面右侧的圆形按钮挑选 style 填入，也可以直接填入 css 链接
+      # Select the style button on the right side of the link page, you can also set the CSS link
+      # See: https://prismjs.com/
+      style: "default"
+      style_dark: "tomorrow night"
+
+#---------------------------
+# 404页
+# 404 Page
+#---------------------------
+page404:
+  enable: true
+  banner_img: /img/background.jpg
+  banner_img_height: 85
+  banner_mask_alpha: 0.3
+  # 重定向到首页的延迟(毫秒)
+  # Delay in redirecting to home page (milliseconds)
+  redirect_delay: 5000
+
+#---------------------------
+# 友链页
+# Links Page
+#---------------------------
+links:
+  enable: true
+  banner_img: /img/background.jpg
+  banner_img_height: 60
+  banner_mask_alpha: 0.3
+  # 友链的成员项
+  # Member item of page
+  items:
+    - {
+        title: "Fluid Blog",
+        intro: "主题博客",
+        link: "https://hexo.fluid-dev.com/",
+        avatar: "/img/background.jpg",
+      }
+    - {
+        title: "Fluid Docs",
+        intro: "主题使用指南",
+        link: "https://hexo.fluid-dev.com/docs/",
+        avatar: "/img/background.jpg",
+      }
+    - {
+        title: "Fluid Repo",
+        intro: "主题 GitHub 仓库",
+        link: "https://github.com/fluid-dev/hexo-theme-fluid",
+        avatar: "/img/background.jpg",
+      }
+
+  # 当成员头像加载失败时，替换为指定图片
+  # When the member avatar fails to load, replace the specified image
+  onerror_avatar: /img/avatar.png
+
+  # 友链下方自定义区域，支持 HTML，可插入例如申请友链的文字
+  # Custom content at the bottom of the links
+  custom:
+    enable: false
+    content: "<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：Fluid</li><li>简介：Fluid 主题官方博客</li><li>链接：https://hexo.fluid-dev.com</li><li>图片：https://hexo.fluid-dev.com/img/favicon.png</li></ul>"
+
+  # 评论插件
+  # Comment plugin
+  comments:
+    enable: false
+    # 指定的插件，需要同时设置对应插件的必要参数
+    # The specified plugin needs to set the necessary parameters at the same time
+    # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus | discuss
+    type: disqus
+
+#---------------------------
+# 以下是配置 JS CSS 等静态资源的 URL 前缀，可以自定义成 CDN 地址，
+# 如果需要修改，最好使用与默认配置相同的版本，以避免潜在的问题，
+# ** 如果你不知道如何设置，请不要做任何改动 **
+#
+# Here is the url prefix to configure the static assets. Set CDN addresses you want to customize.
+# Be aware that you would better use the same version as default ones to avoid potential problems.
+# DO NOT EDIT THE FOLLOWING SETTINGS UNLESS YOU KNOW WHAT YOU ARE DOING
+#---------------------------
+
+static_prefix:
+  # 内部静态
+  # Internal static
+  internal_js: /js
+  internal_css: /css
+  internal_img: /img
+
+  anchor: https://lib.baomitu.com/anchor-js/5.0.0/
+
+  github_markdown: https://lib.baomitu.com/github-markdown-css/4.0.0/
+
+  jquery: https://lib.baomitu.com/jquery/3.6.4/
+
+  bootstrap: https://lib.baomitu.com/twitter-bootstrap/4.6.1/
+
+  prismjs: https://lib.baomitu.com/prism/1.29.0/
+
+  tocbot: https://lib.baomitu.com/tocbot/4.20.1/
+
+  typed: https://lib.baomitu.com/typed.js/2.0.12/
+
+  fancybox: https://lib.baomitu.com/fancybox/3.5.7/
+
+  nprogress: https://lib.baomitu.com/nprogress/0.2.0/
+
+  mathjax: https://lib.baomitu.com/mathjax/3.2.2/
+
+  katex: https://lib.baomitu.com/KaTeX/0.16.2/
+
+  busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/
+
+  clipboard: https://lib.baomitu.com/clipboard.js/2.0.11/
+
+  mermaid: https://lib.baomitu.com/mermaid/8.14.0/
+
+  valine: https://lib.baomitu.com/valine/1.5.1/
+
+  waline: https://registry.npmmirror.com/@waline/client/2.15.8/files/dist/
+
+  gitalk: https://lib.baomitu.com/gitalk/1.8.0/
+
+  disqusjs: https://lib.baomitu.com/disqusjs/1.3.0/
+
+  twikoo: https://lib.baomitu.com/twikoo/1.6.8/
+
+  discuss: https://lib.baomitu.com/discuss/1.2.1/
+
+  hint: https://lib.baomitu.com/hint.css/2.7.0/
+
+  moment: https://lib.baomitu.com/moment.js/2.29.4/
