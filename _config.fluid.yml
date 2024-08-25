@@ -14,6 +14,10 @@
 
 navbar:
   blog_title: Blade
+  ground_glass:
+    enable: true
+    px: 3
+  color: red
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
@@ -32,6 +36,10 @@ font: # 主题字体配置
 post:
   banner_img: /img/background.jpg
   post.banner_img: /img/background.jpg
+  toc:
+    enable: false
+  copyright:
+    enable: false
 
 index:
   index_img: /img/background.jpg
@@ -58,6 +66,14 @@ fun_features:
 
 default_index_img: /img/background.jpg
 
+tag:
+  enable: true
+  banner_img: /img/background.jpg
+
+footer:
+  statistics:
+    enable: false
+
 page:
   banner_img: /img/background.jpg
   banner_img_height: 100
@@ -81,6 +97,7 @@ tab_title_separator: " - "
 # 强制所有链接升级为 HTTPS（适用于图片等资源出现 HTTP 混入报错）
 force_https: false
 
+custom_html: ""
 # 代码块的增强配置
 code:
   # 是否开启复制代码的按钮
