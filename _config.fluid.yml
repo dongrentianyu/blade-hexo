@@ -26,17 +26,18 @@ navbar:
 
 font: # 主题字体配置
   font_size: 26px # 全局字号
-  font_family: "楷体" # 全局字体族
+  font_family: "KaiTi" # 全局字体族
   code_font_size: 85% # 代码的字号
 
 post:
   banner_img: /img/background.jpg
+  post.banner_img: /img/background.jpg
 
 index:
   index_img: /img/background.jpg
   post_url_target: _self
   banner_img: /img/background.jpg
-  banner_img_height: 80
+  banner_img_height: 100
   post_meta:
     date: true
     category: true
@@ -57,17 +58,16 @@ fun_features:
 
 default_index_img: /img/background.jpg
 
+page:
+  banner_img: /img/background.jpg
+  banner_img_height: 100
+  banner_mask_alpha: 0.3
+
 about:
   avatar: /img/1.jpg
   name: "马不前"
-  intro: "000"
+  intro: "一世风尘，也只如雪泥打他人脚底经过"
   icons:
-    - {
-        class: "iconfont icon-github-fill",
-        link: "https://github.com",
-        tip: "GitHub",
-      }
-
 #---------------------------
 
 # 用于浏览器标签的图标
@@ -125,70 +125,16 @@ code:
 page404:
   enable: true
   banner_img: /img/background.jpg
-  banner_img_height: 85
+  banner_img_height: 100
   banner_mask_alpha: 0.3
   # 重定向到首页的延迟(毫秒)
   # Delay in redirecting to home page (milliseconds)
   redirect_delay: 5000
 
 #---------------------------
-# 友链页
-# Links Page
-#---------------------------
-links:
-  enable: true
-  banner_img: /img/background.jpg
-  banner_img_height: 60
-  banner_mask_alpha: 0.3
-  # 友链的成员项
-  # Member item of page
-  items:
-    - {
-        title: "Fluid Blog",
-        intro: "主题博客",
-        link: "https://hexo.fluid-dev.com/",
-        avatar: "/img/background.jpg",
-      }
-    - {
-        title: "Fluid Docs",
-        intro: "主题使用指南",
-        link: "https://hexo.fluid-dev.com/docs/",
-        avatar: "/img/background.jpg",
-      }
-    - {
-        title: "Fluid Repo",
-        intro: "主题 GitHub 仓库",
-        link: "https://github.com/fluid-dev/hexo-theme-fluid",
-        avatar: "/img/background.jpg",
-      }
-
-  # 当成员头像加载失败时，替换为指定图片
-  # When the member avatar fails to load, replace the specified image
-  onerror_avatar: /img/avatar.png
-
-  # 友链下方自定义区域，支持 HTML，可插入例如申请友链的文字
-  # Custom content at the bottom of the links
-  custom:
-    enable: false
-    content: "<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：Fluid</li><li>简介：Fluid 主题官方博客</li><li>链接：https://hexo.fluid-dev.com</li><li>图片：https://hexo.fluid-dev.com/img/favicon.png</li></ul>"
-
-  # 评论插件
-  # Comment plugin
-  comments:
-    enable: false
-    # 指定的插件，需要同时设置对应插件的必要参数
-    # The specified plugin needs to set the necessary parameters at the same time
-    # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus | discuss
-    type: disqus
-
-#---------------------------
 # 以下是配置 JS CSS 等静态资源的 URL 前缀，可以自定义成 CDN 地址，
 # 如果需要修改，最好使用与默认配置相同的版本，以避免潜在的问题，
 # ** 如果你不知道如何设置，请不要做任何改动 **
-#
-# Here is the url prefix to configure the static assets. Set CDN addresses you want to customize.
-# Be aware that you would better use the same version as default ones to avoid potential problems.
-# DO NOT EDIT THE FOLLOWING SETTINGS UNLESS YOU KNOW WHAT YOU ARE DOING
 #---------------------------
 
 static_prefix:
