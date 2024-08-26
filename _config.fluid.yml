@@ -11,79 +11,6 @@
 #---------------------------
 # 全局
 # Global
-
-navbar:
-  blog_title: Blade
-  ground_glass:
-    enable: true
-    px: 3
-  color: red
-  menu:
-    - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
-    - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
-    - {
-        key: "about",
-        link: "/about/",
-        icon: "iconfont icon-user-fill",
-        name: "关于",
-      }
-
-font: # 主题字体配置
-  font_size: 26px # 全局字号
-  font_family: "KaiTi" # 全局字体族
-  code_font_size: 85% # 代码的字号
-
-post:
-  banner_img: /img/background.jpg
-  post.banner_img: /img/background.jpg
-  toc:
-    enable: false
-  copyright:
-    enable: false
-
-index:
-  index_img: /img/background.jpg
-  post_url_target: _self
-  banner_img: /img/background.jpg
-  banner_img_height: 100
-  post_meta:
-    date: true
-    category: true
-    tag: true
-    banner_img: /img/background.jpg
-  slogan:
-    enable: true
-    text: The Jealousy and Roar Blade
-  auto_excerpt:
-    enable: false
-
-fun_features:
-  typing: # 为 subtitle 添加打字机效果
-    enable: false
-    typeSpeed: 70 # 打印速度
-    cursorChar: "_" # 游标字符
-    loop: false # 是否循环播放效果
-
-default_index_img: /img/background.jpg
-
-tag:
-  enable: true
-  banner_img: /img/background.jpg
-
-footer:
-  statistics:
-    enable: false
-
-page:
-  banner_img: /img/background.jpg
-  banner_img_height: 100
-  banner_mask_alpha: 0.3
-
-about:
-  avatar: /img/1.jpg
-  name: "马不前"
-  intro: "一世风尘，也只如雪泥打他人脚底经过"
-  icons:
 #---------------------------
 
 # 用于浏览器标签的图标
@@ -96,6 +23,136 @@ tab_title_separator: " - "
 
 # 强制所有链接升级为 HTTPS（适用于图片等资源出现 HTTP 混入报错）
 force_https: false
+
+#---------------------------
+# 页头
+# Header
+#---------------------------
+
+navbar:
+  blog_title: Blade
+  ground_glass:
+    enable: true
+    px: 3
+    alpha: 0.7
+  color: red
+  menu:
+    - { key: "home", link: "/", icon: "iconfont icon-home-fill", name: "首页" }
+    - {
+        key: "tag",
+        link: "/tags/",
+        icon: "iconfont icon-tags-fill",
+        name: "标签",
+      }
+    - {
+        key: "about",
+        link: "/about/",
+        icon: "iconfont icon-user-fill",
+        name: "关于",
+      }
+
+#---------------------------
+# 页脚
+# Footer
+# 这里就不显示了，会在关于页面里写一下。
+# 统计什么的完全没有必要，也说明不了什么。
+#---------------------------
+
+footer:
+  content: ""
+  statistics:
+    enable: false
+
+#---------------------------
+# 首页
+# Index Page
+#---------------------------
+
+index:
+  index_img: /img/background.jpg
+  post_url_target: _self
+  banner_img: /img/background.jpg
+  banner_img_height: 100
+  post_meta:
+    date: true
+    category: true
+    tag: true
+    banner_img: ""
+  slogan:
+    enable: true
+    text: The Jealousy and Roar Blade
+  auto_excerpt:
+    enable: false
+
+#---------------------------
+# 文章页
+# Post Page
+#---------------------------
+post:
+  banner_img: ""
+  post.banner_img: ""
+  toc:
+    enable: false
+  copyright:
+    enable: false
+  meta:
+    author:
+      enable: false
+    wordcount:
+      enable: false
+    min2read:
+      enable: false
+    views:
+      enable: false
+    date:
+      enable: false
+  updated:
+    enable: false
+
+#---------------------------
+# 关于页
+# About Page
+#---------------------------
+
+about:
+  avatar: /img/1.jpg
+  name: "马不前"
+  intro: "一世风尘，也只如雪泥打他人脚底经过"
+  icons:
+
+#---------------------------
+# 标签归档页
+# Tags Page
+#---------------------------
+tag:
+  enable: true
+  banner_img: /img/background.jpg
+
+#---------------------------
+# 自定义页
+# Custom Page
+#
+# 通过 hexo new page 命令创建的页面
+# Custom Page through `hexo new page`
+#---------------------------
+page:
+  banner_img:
+  banner_img_height: 100
+  banner_mask_alpha: 0.3
+
+font: # 主题字体配置
+  font_size: 26px # 全局字号
+  font_family: "KaiTi" # 全局字体族
+  code_font_size: 85% # 代码的字号
+
+fun_features:
+  typing: # 为 subtitle 添加打字机效果
+    enable: false
+    typeSpeed: 70 # 打印速度
+    cursorChar: "_" # 游标字符
+    loop: false # 是否循环播放效果
+
+default_index_img: /img/background.jpg
 
 custom_html: ""
 # 代码块的增强配置
@@ -141,7 +198,7 @@ code:
 #---------------------------
 page404:
   enable: true
-  banner_img: /img/background.jpg
+  banner_img: /img/loading.gif
   banner_img_height: 100
   banner_mask_alpha: 0.3
   # 重定向到首页的延迟(毫秒)
