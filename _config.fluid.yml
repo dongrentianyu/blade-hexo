@@ -27,6 +27,7 @@ force_https: false
 #---------------------------
 # 页头
 # Header
+# 页头上的文字是强制生成的，那就没办法了，除非换掉
 #---------------------------
 
 navbar:
@@ -35,21 +36,9 @@ navbar:
     enable: true
     px: 3
     alpha: 0.7
-  color: red
   menu:
-    - { key: "home", link: "/", icon: "iconfont icon-home-fill", name: "首页" }
-    - {
-        key: "tag",
-        link: "/tags/",
-        icon: "iconfont icon-tags-fill",
-        name: "标签",
-      }
-    - {
-        key: "about",
-        link: "/about/",
-        icon: "iconfont icon-user-fill",
-        name: "关于",
-      }
+    - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
+    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
 
 #---------------------------
 # 页脚
@@ -89,8 +78,8 @@ index:
 # Post Page
 #---------------------------
 post:
-  banner_img: ""
-  post.banner_img: ""
+  banner_img: ./img/2.png # 这里可以设置文章的图片，但不清楚如何关闭图片
+  banner_img_height: 100
   toc:
     enable: false
   copyright:
@@ -115,6 +104,8 @@ post:
 #---------------------------
 
 about:
+  banner_img: ./img/2.png
+  banner_img_height: 100
   avatar: /img/1.jpg
   name: "马不前"
   intro: "一世风尘，也只如雪泥打他人脚底经过"
@@ -124,9 +115,9 @@ about:
 # 标签归档页
 # Tags Page
 #---------------------------
-tag:
-  enable: true
-  banner_img: /img/background.jpg
+# tag:
+#   enable: true
+#   banner_img: /img/background.jpg
 
 #---------------------------
 # 自定义页
@@ -135,13 +126,13 @@ tag:
 # 通过 hexo new page 命令创建的页面
 # Custom Page through `hexo new page`
 #---------------------------
-page:
-  banner_img:
-  banner_img_height: 100
-  banner_mask_alpha: 0.3
+# page:
+#   banner_img: ""
+#   banner_img_height: 100
+#   banner_mask_alpha: 0.3
 
 font: # 主题字体配置
-  font_size: 26px # 全局字号
+  font_size: 32px # 全局字号
   font_family: "KaiTi" # 全局字体族
   code_font_size: 85% # 代码的字号
 
@@ -152,7 +143,8 @@ fun_features:
     cursorChar: "_" # 游标字符
     loop: false # 是否循环播放效果
 
-default_index_img: /img/background.jpg
+language: zh-CN
+custom_css: /css/self.css
 
 custom_html: ""
 # 代码块的增强配置
